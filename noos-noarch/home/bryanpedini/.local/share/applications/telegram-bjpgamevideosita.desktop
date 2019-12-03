@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Telegram BJPGameVideosITA
+Description=A new era of messaging
+Type=application
+Exec=telegram-desktop -workdir $HOME/telegram-data/bjpgamevideosita
+Icon=$HOME/Pictures/icons/telegram.ico
