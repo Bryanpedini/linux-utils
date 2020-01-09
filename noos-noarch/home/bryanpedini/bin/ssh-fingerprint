@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+md5=false
+key=""
+
+# command-line parameters
+for prm in "$@"; do
+    if [ "${prm:0:1}" == "-" ]; then
+        if [ "$prm" == "-5" ] || [ "$prm" == "--md5" ]; then
+            md5=true
+        fi
+    else
+        key="$prm"
+    fi
+done
+
+if [ "$key" == "" ]; then echo "Usage: $0 [ -5 | --md5 ] <key>"; exit 1; fi
+
+if [ "$md5" == true ]; then
+    ssh-keygen -E md5 -lf "$key"
+else
+    ssh-keygen -lf "$key"
+fi
