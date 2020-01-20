@@ -2,5 +2,5 @@
 Name=Telegram Bryanpedini
 Description=A new era of messaging
 Type=application
-Exec=telegram-desktop -workdir $HOME/telegram-data/bryanpedini
+Exec=telegram -workdir $HOME/telegram-data/bryanpedini
 Icon=$HOME/Pictures/icons/telegram.ico

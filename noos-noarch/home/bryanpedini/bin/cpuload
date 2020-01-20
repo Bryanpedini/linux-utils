@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo -n "CPU: "
+top -bn1 | grep "Cpu(s)" | cut -c 10-13 | awk '{print $1"%"}'

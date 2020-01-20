@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+[[ "$#" -eq 1 ]] && BASEDIR="$1" || BASEDIR="$(pwd)"
+find "$BASEDIR" -type f -exec echo -e "\e[32m$(basename -- {})\e[37m:" \; -exec cat {} \;
